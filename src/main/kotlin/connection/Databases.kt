@@ -18,8 +18,8 @@ object DatabaseFactory {
     {
         Database.connect(
             "jdbc:postgresql://ep-purple-water-a5lenduw.us-east-2.aws.neon.tech/Test_DB",
-            user = "Test_DB_owner",
-            password = "npg_5xYpuAFzkN2E"
+            user = System.getenv("DATABASE_USER"),
+            password = System.getenv("DATABASE_PASSWORD")
         )
 
         transaction{
