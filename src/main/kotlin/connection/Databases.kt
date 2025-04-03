@@ -33,3 +33,4 @@ object DatabaseFactory {
 
 suspend fun <T> dbTransaction(block: suspend () -> T): T =
     newSuspendedTransaction(Dispatchers.IO) { block() }
+
